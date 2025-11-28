@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - API Configuration
 struct APIConfiguration {
-    static let baseURL = "https://voyatek-tst.free.beeceptor.com/api"
+    static let baseURL = "https://voyatek-tst.free.beeceptor.com/api/v1"
     
     // MARK: - Endpoints
     enum Endpoint {
