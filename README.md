@@ -1,4 +1,4 @@
-# Voyatek Group App - Trip Planning
+# Voyage Booking - Trip Planning
 
 A professional iOS application for planning and managing trips, built with SwiftUI and UIKit (programmatic), featuring comprehensive trip management with flights, hotels, and activities.
 
@@ -92,7 +92,12 @@ voyatekGroupApp/
    - Ensure Satoshi font files are included in the project
    - Add fonts to `Info.plist` under "Fonts provided by application"
 
-4. **Build and Run**
+4. **App Name and Icon Configuration**
+   - **App Display Name**: The app display name is set to "Voyage Booking" in the project configuration
+     - The app will display as "Voyage Booking" on the home screen
+   - **App Icon**: The `AirplaneIcon` has been configured as the app icon.
+
+5. **Build and Run**
    - Select your target device or simulator
    - Press `Cmd + R` or click the Run button
    - The app will build and launch automatically
@@ -619,6 +624,7 @@ enum APIError: LocalizedError {
 ### Image Assets
 
 The app uses various image assets:
+- `AirplaneIcon`: App icon (1024x1024)
 - `tripBg`: Trip background image
 - `planTripBg`: Plan trip background illustration
 - `hotel1`: Hotel image
@@ -740,7 +746,7 @@ Created by Micheal B. - 2025
 
 ## Acknowledgments
 
-- Voyatek for the project requirements
+- Voyage Booking team for the project requirements
 - Beeceptor for providing the mock API endpoint
 - Apple for SwiftUI and UIKit frameworks
 - Figma for design specifications
