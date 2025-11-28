@@ -11,7 +11,7 @@ import SwiftUI
 struct voyatekGroupAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PlanTripView()
         }
     }
 }
