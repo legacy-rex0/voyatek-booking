@@ -1,0 +1,489 @@
+[
+  {
+    "id": "trip-001",
+    "destination": "Dubai, UAE",
+    "start_date": "2024-03-15T00:00:00Z",
+    "end_date": "2024-03-22T00:00:00Z",
+    "title": "Dubai Luxury Adventure",
+    "travel_style": "Luxury",
+    "trip_description": "Experience the opulence of Dubai with world-class hotels, fine dining, and iconic landmarks.",
+    "image_url": "tripBg",
+    "created_at": "2024-02-01T10:30:00Z",
+    "updated_at": "2024-02-15T14:20:00Z",
+    "flights": [
+      {
+        "id": "flight-001",
+        "airline": "American Airlines",
+        "flight_number": "AA-829",
+        "departure_time": "08:35",
+        "departure_date": "Sun, 15 Mar",
+        "departure_airport": "JFK",
+        "arrival_time": "19:45",
+        "arrival_date": "Mon, 16 Mar",
+        "arrival_airport": "DXB",
+        "duration": "13h 10m",
+        "is_direct": false,
+        "price": "₦ 450,000.00"
+      },
+      {
+        "id": "flight-002",
+        "airline": "Emirates",
+        "flight_number": "EK-202",
+        "departure_time": "14:20",
+        "departure_date": "Sat, 21 Mar",
+        "departure_airport": "DXB",
+        "arrival_time": "06:30",
+        "arrival_date": "Sun, 22 Mar",
+        "arrival_airport": "JFK",
+        "duration": "14h 10m",
+        "is_direct": true,
+        "price": "₦ 480,000.00"
+      }
+    ],
+    "hotels": [
+      {
+        "id": "hotel-001",
+        "name": "Burj Al Arab Jumeirah",
+        "address": "Jumeirah Street, Dubai, UAE",
+        "rating": 9.2,
+        "review_count": 1245,
+        "room_type": "Deluxe Suite",
+        "check_in_date": "15-03-2024",
+        "check_out_date": "22-03-2024",
+        "image_url": "hotel1",
+        "price": "₦ 850,000.00"
+      }
+    ],
+    "activities": [
+      {
+        "id": "activity-001",
+        "name": "Burj Khalifa Observation Deck",
+        "description": "Visit the world's tallest building and enjoy panoramic views of Dubai from the 124th floor.",
+        "location": "Downtown Dubai",
+        "rating": 9.5,
+        "review_count": 8567,
+        "duration": "2 hours",
+        "scheduled_time": "10:00 AM",
+        "scheduled_date": "16 Mar",
+        "day_number": 1,
+        "activity_number": 1,
+        "image_url": "activity1",
+        "price": "₦ 25,000.00"
+      },
+      {
+        "id": "activity-002",
+        "name": "Desert Safari with BBQ Dinner",
+        "description": "Experience dune bashing, camel riding, and traditional entertainment with a delicious BBQ dinner.",
+        "location": "Dubai Desert",
+        "rating": 8.8,
+        "review_count": 3421,
+        "duration": "6 hours",
+        "scheduled_time": "3:00 PM",
+        "scheduled_date": "17 Mar",
+        "day_number": 2,
+        "activity_number": 1,
+        "image_url": "activity1",
+        "price": "₦ 45,000.00"
+      }
+    ]
+  },
+  {
+    "id": "trip-002",
+    "destination": "Paris, France",
+    "start_date": "2024-04-10T00:00:00Z",
+    "end_date": "2024-04-17T00:00:00Z",
+    "title": "Romantic Paris Getaway",
+    "travel_style": "Romantic",
+    "trip_description": "Discover the City of Light with your loved one, exploring iconic landmarks and enjoying French cuisine.",
+    "image_url": "tripBg",
+    "created_at": "2024-02-10T09:15:00Z",
+    "updated_at": "2024-02-20T11:45:00Z",
+    "flights": [
+      {
+        "id": "flight-003",
+        "airline": "Air France",
+        "flight_number": "AF-384",
+        "departure_time": "22:15",
+        "departure_date": "Wed, 10 Apr",
+        "departure_airport": "LAX",
+        "arrival_time": "16:30",
+        "arrival_date": "Thu, 11 Apr",
+        "arrival_airport": "CDG",
+        "duration": "11h 15m",
+        "is_direct": true,
+        "price": "₦ 520,000.00"
+      }
+    ],
+    "hotels": [
+      {
+        "id": "hotel-002",
+        "name": "Hôtel Ritz Paris",
+        "address": "15 Place Vendôme, 75001 Paris, France",
+        "rating": 9.4,
+        "review_count": 2134,
+        "room_type": "Superior Room",
+        "check_in_date": "11-04-2024",
+        "check_out_date": "17-04-2024",
+        "image_url": "hotel1",
+        "price": "₦ 720,000.00"
+      }
+    ],
+    "activities": [
+      {
+        "id": "activity-003",
+        "name": "Eiffel Tower Skip-the-Line Tour",
+        "description": "Skip the long queues and enjoy priority access to the Eiffel Tower with a guided tour.",
+        "location": "Champ de Mars, Paris",
+        "rating": 9.1,
+        "review_count": 12345,
+        "duration": "2.5 hours",
+        "scheduled_time": "9:00 AM",
+        "scheduled_date": "12 Apr",
+        "day_number": 1,
+        "activity_number": 1,
+        "image_url": "activity1",
+        "price": "₦ 35,000.00"
+      },
+      {
+        "id": "activity-004",
+        "name": "Seine River Cruise with Dinner",
+        "description": "Enjoy a romantic dinner cruise along the Seine River with stunning views of Paris landmarks.",
+        "location": "Seine River, Paris",
+        "rating": 8.9,
+        "review_count": 5678,
+        "duration": "3 hours",
+        "scheduled_time": "7:00 PM",
+        "scheduled_date": "13 Apr",
+        "day_number": 2,
+        "activity_number": 1,
+        "image_url": "activity1",
+        "price": "₦ 55,000.00"
+      }
+    ]
+  },
+  {
+    "id": "trip-003",
+    "destination": "Tokyo, Japan",
+    "start_date": "2024-05-01T00:00:00Z",
+    "end_date": "2024-05-10T00:00:00Z",
+    "title": "Tokyo Cultural Experience",
+    "travel_style": "Cultural",
+    "trip_description": "Immerse yourself in Japanese culture, from ancient temples to modern technology and delicious cuisine.",
+    "image_url": "tripBg",
+    "created_at": "2024-02-15T13:20:00Z",
+    "updated_at": "2024-02-25T16:10:00Z",
+    "flights": [
+      {
+        "id": "flight-004",
+        "airline": "Japan Airlines",
+        "flight_number": "JL-61",
+        "departure_time": "11:00",
+        "departure_date": "Wed, 1 May",
+        "departure_airport": "SFO",
+        "arrival_time": "14:30",
+        "arrival_date": "Thu, 2 May",
+        "arrival_airport": "NRT",
+        "duration": "11h 30m",
+        "is_direct": true,
+        "price": "₦ 580,000.00"
+      },
+      {
+        "id": "flight-005",
+        "airline": "All Nippon Airways",
+        "flight_number": "NH-107",
+        "departure_time": "18:45",
+        "departure_date": "Fri, 10 May",
+        "departure_airport": "NRT",
+        "arrival_time": "12:15",
+        "arrival_date": "Fri, 10 May",
+        "arrival_airport": "SFO",
+        "duration": "9h 30m",
+        "is_direct": true,
+        "price": "₦ 560,000.00"
+      }
+    ],
+    "hotels": [
+      {
+        "id": "hotel-003",
+        "name": "The Ritz-Carlton Tokyo",
+        "address": "9-7-1 Akasaka, Minato, Tokyo 107-6245, Japan",
+        "rating": 9.3,
+        "review_count": 3456,
+        "room_type": "Deluxe City View",
+        "check_in_date": "02-05-2024",
+        "check_out_date": "10-05-2024",
+        "image_url": "hotel1",
+        "price": "₦ 680,000.00"
+      }
+    ],
+    "activities": [
+      {
+        "id": "activity-005",
+        "name": "Traditional Tea Ceremony Experience",
+        "description": "Learn the art of Japanese tea ceremony in an authentic setting with a master instructor.",
+        "location": "Shibuya, Tokyo",
+        "rating": 9.0,
+        "review_count": 2341,
+        "duration": "1.5 hours",
+        "scheduled_time": "2:00 PM",
+        "scheduled_date": "03 May",
+        "day_number": 1,
+        "activity_number": 1,
+        "image_url": "activity1",
+        "price": "₦ 28,000.00"
+      },
+      {
+        "id": "activity-006",
+        "name": "Tokyo Skytree Observatory",
+        "description": "Visit the tallest tower in Japan and enjoy 360-degree views of Tokyo from 450 meters high.",
+        "location": "Sumida, Tokyo",
+        "rating": 8.7,
+        "review_count": 9876,
+        "duration": "2 hours",
+        "scheduled_time": "10:00 AM",
+        "scheduled_date": "04 May",
+        "day_number": 2,
+        "activity_number": 1,
+        "image_url": "activity1",
+        "price": "₦ 32,000.00"
+      },
+      {
+        "id": "activity-007",
+        "name": "Sushi Making Class",
+        "description": "Learn to make authentic Japanese sushi from a professional chef in a hands-on cooking class.",
+        "location": "Ginza, Tokyo",
+        "rating": 9.2,
+        "review_count": 4567,
+        "duration": "3 hours",
+        "scheduled_time": "6:00 PM",
+        "scheduled_date": "05 May",
+        "day_number": 3,
+        "activity_number": 1,
+        "image_url": "activity1",
+        "price": "₦ 48,000.00"
+      }
+    ]
+  },
+  {
+    "id": "trip-004",
+    "destination": "Bali, Indonesia",
+    "start_date": "2024-06-05T00:00:00Z",
+    "end_date": "2024-06-15T00:00:00Z",
+    "title": "Bali Tropical Paradise",
+    "travel_style": "Relaxation",
+    "trip_description": "Escape to the tropical paradise of Bali with beautiful beaches, lush rice terraces, and serene temples.",
+    "image_url": "tripBg",
+    "created_at": "2024-02-20T08:45:00Z",
+    "updated_at": "2024-03-01T10:30:00Z",
+    "flights": [
+      {
+        "id": "flight-006",
+        "airline": "Garuda Indonesia",
+        "flight_number": "GA-88",
+        "departure_time": "23:30",
+        "departure_date": "Wed, 5 Jun",
+        "departure_airport": "SIN",
+        "arrival_time": "02:15",
+        "arrival_date": "Thu, 6 Jun",
+        "arrival_airport": "DPS",
+        "duration": "2h 45m",
+        "is_direct": true,
+        "price": "₦ 180,000.00"
+      },
+      {
+        "id": "flight-007",
+        "airline": "Singapore Airlines",
+        "flight_number": "SQ-942",
+        "departure_time": "10:20",
+        "departure_date": "Sat, 15 Jun",
+        "departure_airport": "DPS",
+        "arrival_time": "13:05",
+        "arrival_date": "Sat, 15 Jun",
+        "arrival_airport": "SIN",
+        "duration": "2h 45m",
+        "is_direct": true,
+        "price": "₦ 190,000.00"
+      }
+    ],
+    "hotels": [
+      {
+        "id": "hotel-004",
+        "name": "The St. Regis Bali Resort",
+        "address": "Strand Beach, Nusa Dua, Bali 80363, Indonesia",
+        "rating": 9.5,
+        "review_count": 2789,
+        "room_type": "Ocean View Villa",
+        "check_in_date": "06-06-2024",
+        "check_out_date": "15-06-2024",
+        "image_url": "hotel1",
+        "price": "₦ 950,000.00"
+      }
+    ],
+    "activities": [
+      {
+        "id": "activity-008",
+        "name": "Sunrise Mount Batur Trekking",
+        "description": "Hike to the summit of Mount Batur to witness a breathtaking sunrise over Bali.",
+        "location": "Kintamani, Bali",
+        "rating": 9.4,
+        "review_count": 3456,
+        "duration": "6 hours",
+        "scheduled_time": "2:00 AM",
+        "scheduled_date": "07 Jun",
+        "day_number": 1,
+        "activity_number": 1,
+        "image_url": "activity1",
+        "price": "₦ 65,000.00"
+      },
+      {
+        "id": "activity-009",
+        "name": "Ubud Rice Terrace & Monkey Forest",
+        "description": "Explore the famous Tegalalang Rice Terraces and visit the Sacred Monkey Forest Sanctuary.",
+        "location": "Ubud, Bali",
+        "rating": 8.9,
+        "review_count": 5678,
+        "duration": "4 hours",
+        "scheduled_time": "9:00 AM",
+        "scheduled_date": "08 Jun",
+        "day_number": 2,
+        "activity_number": 1,
+        "image_url": "activity1",
+        "price": "₦ 42,000.00"
+      },
+      {
+        "id": "activity-010",
+        "name": "Traditional Balinese Spa Experience",
+        "description": "Indulge in a traditional Balinese massage and spa treatment in a serene setting.",
+        "location": "Seminyak, Bali",
+        "rating": 9.1,
+        "review_count": 2345,
+        "duration": "2 hours",
+        "scheduled_time": "3:00 PM",
+        "scheduled_date": "09 Jun",
+        "day_number": 3,
+        "activity_number": 1,
+        "image_url": "activity1",
+        "price": "₦ 55,000.00"
+      }
+    ]
+  },
+  {
+    "id": "trip-005",
+    "destination": "New York, USA",
+    "start_date": "2024-07-20T00:00:00Z",
+    "end_date": "2024-07-27T00:00:00Z",
+    "title": "New York City Adventure",
+    "travel_style": "Adventure",
+    "trip_description": "Explore the Big Apple with iconic landmarks, Broadway shows, and world-class dining experiences.",
+    "image_url": "tripBg",
+    "created_at": "2024-03-01T12:00:00Z",
+    "updated_at": "2024-03-10T15:20:00Z",
+    "flights": [
+      {
+        "id": "flight-008",
+        "airline": "Delta Airlines",
+        "flight_number": "DL-2847",
+        "departure_time": "07:15",
+        "departure_date": "Sat, 20 Jul",
+        "departure_airport": "LAX",
+        "arrival_time": "15:45",
+        "arrival_date": "Sat, 20 Jul",
+        "arrival_airport": "JFK",
+        "duration": "5h 30m",
+        "is_direct": true,
+        "price": "₦ 320,000.00"
+      },
+      {
+        "id": "flight-009",
+        "airline": "United Airlines",
+        "flight_number": "UA-1842",
+        "departure_time": "18:30",
+        "departure_date": "Sat, 27 Jul",
+        "departure_airport": "JFK",
+        "arrival_time": "21:45",
+        "arrival_date": "Sat, 27 Jul",
+        "arrival_airport": "LAX",
+        "duration": "5h 15m",
+        "is_direct": true,
+        "price": "₦ 310,000.00"
+      }
+    ],
+    "hotels": [
+      {
+        "id": "hotel-005",
+        "name": "The Plaza Hotel",
+        "address": "768 5th Ave, New York, NY 10019, USA",
+        "rating": 9.0,
+        "review_count": 4567,
+        "room_type": "Grand Deluxe Room",
+        "check_in_date": "20-07-2024",
+        "check_out_date": "27-07-2024",
+        "image_url": "hotel1",
+        "price": "₦ 780,000.00"
+      }
+    ],
+    "activities": [
+      {
+        "id": "activity-011",
+        "name": "Statue of Liberty & Ellis Island Tour",
+        "description": "Take a ferry to Liberty Island and explore the iconic Statue of Liberty and Ellis Island Immigration Museum.",
+        "location": "Liberty Island, New York",
+        "rating": 9.3,
+        "review_count": 12345,
+        "duration": "4 hours",
+        "scheduled_time": "9:00 AM",
+        "scheduled_date": "21 Jul",
+        "day_number": 1,
+        "activity_number": 1,
+        "image_url": "activity1",
+        "price": "₦ 38,000.00"
+      },
+      {
+        "id": "activity-012",
+        "name": "Broadway Show - The Lion King",
+        "description": "Experience the magic of Broadway with tickets to the award-winning musical The Lion King.",
+        "location": "Times Square, New York",
+        "rating": 9.6,
+        "review_count": 9876,
+        "duration": "2.5 hours",
+        "scheduled_time": "7:00 PM",
+        "scheduled_date": "22 Jul",
+        "day_number": 2,
+        "activity_number": 1,
+        "image_url": "activity1",
+        "price": "₦ 85,000.00"
+      },
+      {
+        "id": "activity-013",
+        "name": "Central Park Bike Tour",
+        "description": "Explore Central Park on a guided bike tour, visiting famous landmarks and scenic spots.",
+        "location": "Central Park, New York",
+        "rating": 8.8,
+        "review_count": 3456,
+        "duration": "3 hours",
+        "scheduled_time": "10:00 AM",
+        "scheduled_date": "23 Jul",
+        "day_number": 3,
+        "activity_number": 1,
+        "image_url": "activity1",
+        "price": "₦ 45,000.00"
+      },
+      {
+        "id": "activity-014",
+        "name": "Empire State Building Observatory",
+        "description": "Visit the iconic Empire State Building and enjoy panoramic views of New York City from the 86th floor.",
+        "location": "Midtown Manhattan, New York",
+        "rating": 8.9,
+        "review_count": 11234,
+        "duration": "2 hours",
+        "scheduled_time": "2:00 PM",
+        "scheduled_date": "24 Jul",
+        "day_number": 4,
+        "activity_number": 1,
+        "image_url": "activity1",
+        "price": "₦ 42,000.00"
+      }
+    ]
+  }
+]
+
