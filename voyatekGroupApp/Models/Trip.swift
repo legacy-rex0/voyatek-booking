@@ -39,6 +39,25 @@ struct Trip: Codable, Identifiable, Hashable {
         case activities
     }
     
+    // Custom decoder to handle missing fields gracefully
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        id = try container.decodeIfPresent(String.self, forKey: .id)
+        destination = try container.decode(String.self, forKey: .destination)
+        startDate = try container.decode(String.self, forKey: .startDate)
+        endDate = try container.decode(String.self, forKey: .endDate)
+        title = try container.decodeIfPresent(String.self, forKey: .title)
+        travelStyle = try container.decodeIfPresent(String.self, forKey: .travelStyle)
+        tripDescription = try container.decodeIfPresent(String.self, forKey: .tripDescription)
+        imageUrl = try container.decodeIfPresent(String.self, forKey: .imageUrl)
+        createdAt = try container.decodeIfPresent(String.self, forKey: .createdAt)
+        updatedAt = try container.decodeIfPresent(String.self, forKey: .updatedAt)
+        flights = try container.decodeIfPresent([Flight].self, forKey: .flights)
+        hotels = try container.decodeIfPresent([Hotel].self, forKey: .hotels)
+        activities = try container.decodeIfPresent([Activity].self, forKey: .activities)
+    }
+    
     // Computed property for duration
     var duration: Int? {
         guard let start = dateFromString(startDate),

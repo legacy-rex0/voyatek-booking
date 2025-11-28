@@ -46,6 +46,23 @@ struct PlanTripView: View {
             .task {
                 await viewModel.fetchTrips()
             }
+            .refreshable {
+                await viewModel.refreshTrips()
+            }
+            .alert("Error", isPresented: $viewModel.showError) {
+                Button("OK", role: .cancel) { }
+                Button("Retry") {
+                    Task {
+                        await viewModel.fetchTrips()
+                    }
+                }
+            } message: {
+                if let error = viewModel.error {
+                    Text(error.localizedDescription)
+                } else {
+                    Text("An error occurred. Please try again.")
+                }
+            }
             .sheet(item: $activeSheet) { sheet in
             switch sheet {
                 case .date:
@@ -287,12 +304,16 @@ struct PlanTripView: View {
         
         Task {
             await viewModel.createTrip(newTrip)
-            // Reset form
-            selectedLocation = ""
-            startDate = nil
-            endDate = nil
-            tripTitle = ""
-            tripDetailsDescription = ""
+            
+            // Only reset form if creation was successful
+            if viewModel.error == nil {
+                selectedLocation = ""
+                startDate = nil
+                endDate = nil
+                tripTitle = ""
+                tripDetailsDescription = ""
+                activeSheet = nil
+            }
         }
     }
 }
@@ -303,89 +324,50 @@ class PlanTripViewModel: ObservableObject {
     @Published var trips: [Trip] = []
     @Published var isLoading = false
     @Published var error: Error?
+    @Published var showError = false
     
     private let apiService = APIService.shared
     
+    /// Fetch all trips from the API
     func fetchTrips() async {
         isLoading = true
         error = nil
+        showError = false
         
         do {
-            // Mock data with flights, hotels, and activities
-            trips = [
-                Trip(
-                    destination: "New York, United States of America",
-                    startDate: "2024-03-21T00:00:00Z",
-                    endDate: "2024-04-21T00:00:00Z",
-                    title: "Bahamas Family Trip",
-                    travelStyle: "solo",
-                    flights: [
-                        Flight(
-                            id: "flight1",
-                            airline: "American Airlines",
-                            flightNumber: "AA-829",
-                            departureTime: "08:35",
-                            departureDate: "Sun, 20 Aug",
-                            departureAirport: "LOS",
-                            arrivalTime: "09:55",
-                            arrivalDate: "Sun, 20 Aug",
-                            arrivalAirport: "SIN",
-                            duration: "1h 45m",
-                            isDirect: true,
-                            price: "N 123,450.00"
-                        )
-                    ],
-                    hotels: [
-                        Hotel(
-                            id: "hotel1",
-                            name: "Riviera Resort, Lekki",
-                            address: "18, Kenneth Agbakuru Street, Off Access Bank Admiralty Way, Lekki Phase1",
-                            rating: 8.5,
-                            reviewCount: 436,
-                            roomType: "King size room",
-                            checkInDate: "20-04-2024",
-                            checkOutDate: "29-04-2024",
-                            imageUrl: nil,
-                            price: "N123,450.00"
-                        )
-                    ],
-                    activities: [
-                        Activity(
-                            id: "activity1",
-                            name: "The Museum of Modern Art",
-                            description: "Works from Van Gogh to Warhol & beyond plus a sculpture garden, 2 cafes & The modern restaurant.",
-                            location: "Melbourne, Australia",
-                            rating: 8.5,
-                            reviewCount: 436,
-                            duration: "1 hour",
-                            scheduledTime: "10:30 AM",
-                            scheduledDate: "Mar 19",
-                            dayNumber: 1,
-                            activityNumber: 1,
-                            imageUrl: nil,
-                            price: "₦ 123,450.00"
-                        )
-                    ]
-                )
-            ]
+            let fetchedTrips = try await apiService.fetchTrips()
+            trips = fetchedTrips
         } catch {
             self.error = error
+            self.showError = true
+            print("Error fetching trips: \(error.localizedDescription)")
         }
         
         isLoading = false
     }
     
+    /// Create a new trip via API
     func createTrip(_ trip: Trip) async {
+        isLoading = true
+        error = nil
+        showError = false
+        
         do {
-            // In production, use trips endpoint
-            // For now, just add to local array
-            var newTrip = trip
-            // Simulate API response with ID
-            trips.insert(newTrip, at: 0)
-            error = nil
+            let createdTrip = try await apiService.createTrip(trip)
+            // Add the newly created trip to the beginning of the list
+            trips.insert(createdTrip, at: 0)
         } catch {
             self.error = error
+            self.showError = true
+            print("Error creating trip: \(error.localizedDescription)")
         }
+        
+        isLoading = false
+    }
+    
+    /// Refresh trips list
+    func refreshTrips() async {
+        await fetchTrips()
     }
 }
 
